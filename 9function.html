@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+//함수 반환 함수
+        // function funName(){
+        //     return function(dan){
+        //         for(var i = 1 ; i < 10 ; i++){
+        //             document.write(i*dan + "<br>");
+        //         }
+        //     }
+        // }
+
+        // var num = funName();
+        // num(4);
+
+        //클로저
+        function funName(dan){
+            var varName = "요청한" +dan + "에 대한 구구단";
+            return function(){
+                document.write(varName);
+                for(var i = 1 ; i < 10 ; i++){
+                    document.write(i*dan + "<br>");
+                }
+            }
+        }
+
+        var num = funName(4);
+        num();
+
+
+        //함수 안의 함수
+        function outFin(width, height){
+
+            document.write("Triangle : " + triangle());
+            document.write("Quadrangle :" + quadrangle());
+
+            function triangle(){
+                return (width * height) / 2 ; 
+            }
+            
+            function quadrangle(){
+                return width * height ;
+            }
+        }
+
+
+        //콜백 함수
+        function add(x,y){
+            return x+y;
+        }
+        function sub(x,y){
+            return x-y;
+        }
+        function mul(x,y){
+            return x*y;
+        }
+        function printResult(x,y,callback){
+            var result = callback(x,y);
+            document.write(result + "<br>");
+        }
+
+        printResult(2,3,add);
+        printResult(2,3,sub);
+        printResult(2,3,mul);
+
+        //document.write(add(1,2));
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

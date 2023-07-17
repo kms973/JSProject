@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //명시(선언)적 함수 생성
+        function add(num1, num2){
+            return num1+ num2;
+        }
+
+        document.write(add(1,2));
+
+        document.write("<br>")
+
+        //익명 함수
+        var sub = function(num1, num2){
+            return num1 - num2;
+        }
+
+        document.write(sub(7,5))
+
+        document.write("<br>")
+
+        //함수(핵심) = this, argument
+        //argument = 자바 스크립트에서 함수가 만들어 질 때 생성자 처럼 두개를 넣어준다.(argument, this)
+        function funArgs(){
+
+            for (let i = 0; i < arguments.length; i++) {
+                document.write(arguments[i]);
+                
+            }
+
+            return arguments;
+        }
+
+        var fun = funArgs(1,2,3,4,5,6,7);
+        document.write(fun + "<br>")
+        document.write("fun" + fun.length + " <br>")
+
+        for(var num in fun){
+            document.write(fun[num] + "<br>");
+        }
+
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

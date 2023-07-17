@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var kor = prompt("국어점수");
+        var eng = prompt("영어점수");
+        var math = prompt("수학점수");
+
+        var sum, avg;
+        sum = Number(kor) + Number(eng) + Number(math);
+        avg = sum/3;
+
+        document.write("총합 : " + sum);
+        document.write("<br>평균 : " + avg + "<br>");
+
+        if(avg >= 90){
+            document.write("수");
+        } else if(avg >= 80){
+            document.write("우");
+        }else if(avg >= 70){
+            document.write("미");
+        }else if(avg >= 60){
+            document.write("양");
+        }else{
+            document.write("가");
+        }
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //자바스크립트로 성적표를 짜시오. 배열을 활용 할것
+
+        var arrSub = ["국어", "영어", "수학"]
+
+        function getAvg(i){
+            var sum = 0;
+            for (var i in arrSub) {
+               sum += Number(arrSub[i]); 
+            }
+            return sum / 3;
+        }
+
+        function getGrade(i){
+            var grade = '가'
+
+            if(i >= 90){
+                grade = '수';
+            } else if(i >= 80){
+                grade = '우';
+            } else if(i >= 70){
+                grade = '미';
+            } else if(i >= 60){
+                grade = '양';
+            } else{
+                grade = '가';
+            }
+
+            return grade;
+        }
+        
+        for (var i in arrSub) {
+            arrSub[i] = Number(prompt(arrSub[i]));
+        }
+
+        document.write("평균 : " + getAvg(arrSub) + "<br>");
+        document.write("성적 : " + getGrade(getAvg(arrSub)));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

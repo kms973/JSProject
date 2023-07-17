@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       
+       var varArrShiftPop = new Array("가","나","다","라","마");
+       console.log("varArrShiftPop.shift()"+varArrShiftPop.shift());
+       console.log("varArrShiftPop"+varArrShiftPop);
+       console.log("varArrShiftPop.unshift()"+varArrShiftPop.unshift());
+
+       console.log("varArrShiftPop.pop()"+varArrShiftPop.pop());
+       console.log("varArrShiftPop"+varArrShiftPop);
+
+    </script>
+    <script>
+        var lotto = [];
+
+        while(lotto.length < 6){
+            var num = Math.floor((Math.random() *45) + 1);
+
+            if(lotto.indexOf(num) < 0){
+                lotto.push(num);
+            }
+        }
+        document.write(lotto.sort())
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

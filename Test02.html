@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <script src="grade"></script> -->
+    <script>
+        function getAvg(arrSub){
+
+            var sum = 0;
+            for (var i in arrSub) {
+                sum += Number(arrSub[i]);
+            
+            }
+            return sum / arrSub.length;
+        }
+
+        var getGrade = function(avg){
+
+                if(avg >= 90){
+                return "수";
+            } else if(avg >= 80){
+                return "우";
+            }else if(avg >= 70){
+                return "미";
+            }else if(avg >= 60){
+                return "양";
+            }else {
+                return "가";
+            }
+        }
+
+        var arrSub = ["국어","영어","수학"];
+
+        for (var i in arrSub) {
+            arrSub[i] = prompt(arrSub[i]);
+            
+        }
+
+        document.write("평균 : " + getAvg(arrSub) + "<br>");
+        document.write("학점 : " + getGrade(getAvg(arrSub)) + "<br>");
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>
